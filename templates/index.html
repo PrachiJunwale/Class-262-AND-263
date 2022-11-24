@@ -12,20 +12,26 @@
         color: red;
     }
 
+    iframe {
+        width:100%;
+        height: 65%;
+        border:0px;
+    }
 </style>
 </head>
 
 
 <body>
     <h1>Covid Stats!</h1><br>
-    <form method="POST">
-        <label >Enter a Country Code</label><br><br>
-    <input placeholder="Country Code" name="text">
-    <input type="submit">
-</form>
-    <img src="{{image }}">
+    <!--Create form to get country name -->
+    <form method="POST"> <!--POST method will call Python code with the click of the submit button.-->
+        <label >Enter a Country Name</label><br><br>
+        <input placeholder="Country Name" name="text">
+        <input type="submit"> <!--create button to submit-->
+    </form>
+    <iframe src="{{ image }}"></iframe> <!--Display image using iframe-->
 
 
-    <p>You have {{ count }} Visitors.</p>
+    <p>You have {{ count }} Visitors.</p> <!--display visitors at our web page-->
 </body>
 </html>
