@@ -39,7 +39,7 @@ def covid_stats():
 
     text = request.form['text']  #We are requesting text from the HTML page as input
 
-    corona_data = 'https://covid-api-262.herokuapp.com/?country='+text
+    corona_data = 'https://covidstats-sdbd.onrender.com/?country='+text
     print(corona_data)
     #below- return corona_data as image and visitors count data at HTML page
     return render_template("index.html", image=corona_data, count=visitors_count)
